@@ -95,7 +95,7 @@ module.exports = {
         version: "2.0.6",
         description: "Gives other plugins utility functions and the ability to emulate v2.",
         github: "https://github.com/PluckLion/BDLibrary",
-        github_raw: "https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js"
+        github_raw: "https://raw.githubusercontent.com/PluckLion/plugin.js/main/.gitignore"
     },
     changelog: [
         {title: "What's Fixed?", type: "fixed", items: ["Plugin loads again.", "Plugin settings work and display correctly.", "Modals are all rendered properly", "Library uses BetterDiscord's `Webpack` API."]},
@@ -1886,7 +1886,7 @@ class PluginUpdater {
      * @param {module:PluginUpdater~comparator} [comparator] - comparator that determines if there is an update. If not provided uses {@link module:PluginUpdater.defaultComparator}.
      */
     static async checkForUpdate(pluginName, currentVersion, updateURL, comparator) {
-        let updateLink = "https://raw.githubusercontent.com/rauenzi/BetterDiscordAddons/master/Plugins/" + pluginName + "/" + pluginName + ".plugin.js";
+        let updateLink = "https://raw.githubusercontent.com/PluckLion/BDLibrary/main/release/0PluginLibrary.plugin.js" + pluginName + "/" + pluginName + ".plugin.js";
         if (updateURL) updateLink = updateURL;
         if (typeof(comparator) != "function") comparator = this.defaultComparator;
         this.setPlugin(pluginName, updateLink, currentVersion, comparator);
